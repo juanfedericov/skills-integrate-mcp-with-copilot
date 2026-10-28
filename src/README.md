@@ -21,6 +21,17 @@ A super simple FastAPI application that allows students to view and sign up for 
    python app.py
    ```
 
+## Teacher access
+
+Set a teacher username and password in the environment before starting the server:
+
+```sh
+export TEACHER_USERNAME="teacher"
+export TEACHER_PASSWORD="use-a-long-unique-password"
+```
+
+Only authenticated teachers can sign students up or unregister them. Students can still view activities and participant lists. The browser keeps the credentials in memory only for the current page session. Use HTTPS when deploying the application because teacher credentials are sent with HTTP Basic authentication.
+
 3. Open your browser and go to:
    - API documentation: http://localhost:8000/docs
    - Alternative documentation: http://localhost:8000/redoc
